@@ -8,11 +8,13 @@ body{
   font-family: sans-serif;
   color:white
 }
-
+a{
+  text-decoration: none;
+}
 /* topbar*/
 .topbar{
   width: 100%;
-  padding:1rem;
+  padding:10px 1rem;
   border-bottom:solid 1.5px rgba(255, 255, 255, 0.171) ;
   display: flex;
   justify-content: space-between;
@@ -48,7 +50,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top:5rem
+  margin-top:3rem
 }
 .home .action button{
   border:none;
@@ -67,4 +69,93 @@ body{
   font-size: small;
   border:.5px solid rgba(255, 255, 255, 0.247)
 
+}
+.home .mailbox{
+  width: 600px;
+  height: 350px;
+  display: flex;background: linear-gradient(rgba(128, 128, 128, 0.4),
+  rgba(12, 12, 12, 0.918)), url("/mailbox.jpg") center;
+  background-size: cover;
+  border:2px white solid;
+  border-radius:10px
+}
+
+.home .mailbox img{
+  margin: auto;
+  border-radius: 6px;
+  width: 500px;
+}
+
+.send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top:2rem
+  
+}
+.send form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin:1rem auto;
+  width: 400px;
+
+}
+.send form input,
+.send form textarea{
+  width: 100%;
+  padding:1rem;
+  background-color:rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border:none;
+  color:white
+
+}
+.send form button{
+  background-color: white;
+  color:black;
+  border:none;
+  border-radius: 10px;
+  width: 100%;
+  padding:1rem;
+  font-size: large;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:4px
+}
+
+
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 30px;
+  aspect-ratio: 1;
+  --c:no-repeat radial-gradient(farthest-side,#161618 92%,#0000);
+  background: 
+    var(--c) 50%  0, 
+    var(--c) 50%  100%, 
+    var(--c) 100% 50%, 
+    var(--c) 0    50%;
+  background-size: 10px 10px;
+  animation: l18 1s infinite;
+  position: relative;
+}
+.loader::before {    
+  content:"";
+  position: absolute;
+  inset:0;
+  margin: 3px;
+  background: repeating-conic-gradient(#0000 0 35deg,#514b82 0 90deg);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+  border-radius: 50%;
+}
+@keyframes l18 { 
+  100%{transform: rotate(.5turn)}
 }

@@ -1,13 +1,14 @@
 import React from 'react'
 import { Share2,MailQuestion } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Topbar = () => {
   return (
     <div className='topbar'>
-      <div className="logo">
+      <Link className="logo" to='/' style={{color:'white'}}>
         <img src="/ai.png"/>
         <span>InboxAi</span>
-      </div>
+      </Link>
       <div className="topbar-utils">
         <button>
             <Share2 />
