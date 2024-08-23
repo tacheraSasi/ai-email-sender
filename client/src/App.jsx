@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import Send from './pages/Send'
 import Auth from './pages/Auth'
 
-function App() {
+function App() { 
 
   const router = createBrowserRouter([
     {
